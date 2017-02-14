@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Navigator, Alert, View, ListView, TouchableHighlight, Image, TouchableOpacity } from 'react-native';
 import { Container, Content, Header, Title, Thumbnail, Icon, List, ListItem, Text, Badge, H3, InputGroup } from 'native-base';
-import { SideMenu } from 'react-native-side-menu';
 
 const Menu = require('./menu');
+const SideMenu = require('react-native-side-menu');
 const Inicio = require("./inicio");
 const Perfil = require("./perfil");
 
