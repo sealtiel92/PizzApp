@@ -65,36 +65,36 @@ class Menu extends Component {
 };
 
 const styles = StyleSheet.create({
-  menu: {
+	menu: {
 	flex: 1,
 	width: window.width,
 	height: window.height,
 	backgroundColor: '#f0f0f0',
-  },
-  avatarContainer: {
+	},
+	avatarContainer: {
 	padding: 20,
 	width: window.width,
 	height: window.height/6,
 	backgroundColor: '#0035C6'
-  },
-  avatar: {
+	},
+	avatar: {
 	width: 48,
 	height: 48,
 	borderRadius: 24,
-  },
-  name: {
+	},
+	name: {
 	position: 'absolute',
 	left: 70,
 	top: 20,
 	color: '#fff'
-  },
-  item: {
+	},
+	item: {
 	fontSize: 14,
 	fontWeight: '300',
 	padding: 10,
 	margin: 5,
 	backgroundColor: '#e9e9e9'
-  },
+	},
 });
 
 module.exports = Menu;
