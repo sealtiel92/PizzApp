@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Navigator, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Navigator, View, TouchableOpacity, Alert } from 'react-native';
 import { Container, Content, Header, Title, Icon, List, Button, ListItem, Text, InputGroup, Input } from 'native-base';
 
 const Menu = require('./menu');
