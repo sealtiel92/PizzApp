@@ -6,7 +6,7 @@ class Register extends Component {
 
 	constructor(props) {
 		super(props);
-		onRegister = onRegister.bind(this);
+		this.onRegister = this.onRegister.bind(this);
 	}
 
 	onRegister (){
@@ -43,7 +43,7 @@ class Register extends Component {
 					</ListItem>
 				</List>
 				<Button 
-					onPress={onRegister}
+					onPress={this.onRegister}
 					style={{margin: 5, backgroundColor:'#FF3100', alignSelf: 'center', marginTop: 20, marginBottom: 20, width: 300, borderRadius:10, justifyContent:'center' }}>
 					<Text>Registrar</Text>
 				</Button>
