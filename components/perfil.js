@@ -9,21 +9,21 @@ const SideMenu = require('react-native-side-menu');
 
 
 class ButtonMenu extends Component {
-  handlePress(e) {
+	handlePress(e) {
 	if (this.props.onPress) {
-	  this.props.onPress(e);
+		this.props.onPress(e);
 	}
-  }
+	}
 
-  render() {
+	render() {
 	return (
-	  <TouchableOpacity
+		<TouchableOpacity
 		onPress={this.handlePress.bind(this)}
 		style={this.props.style}>
 		<Text>{this.props.children}</Text>
-	  </TouchableOpacity>
+		</TouchableOpacity>
 	);
-  }
+	}
 }
 
 class Perfil extends Component {
@@ -39,25 +39,25 @@ class Perfil extends Component {
 	  };
 	}
 
-  componentDidMount(){
+	componentDidMount(){
 	this.getPerfil();
-  }
-  
-  getPerfil() {
-	  fetch('https://jsonplaceholder.typicode.com/users/1')
-	  .then((response) => response.json())
-	  .then((json) => {
-		  this.setState({
+	}
+	
+	getPerfil() {
+		fetch('https://jsonplaceholder.typicode.com/users/1')
+		.then((response) => response.json())
+		.then((json) => {
+			this.setState({
 			name:json.name, 
 			lastname:json.username,
 			phone: json.phone
-		  });
-		  
-	  })
-	  .catch((error) => {
-		  console.error(error);
-	  });
-  }
+			});
+			
+		})
+		.catch((error) => {
+			console.error(error);
+		});
+	}
 
 	toggle() {
 		this.setState({
