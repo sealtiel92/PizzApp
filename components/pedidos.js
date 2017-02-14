@@ -40,9 +40,9 @@ class Pedidos extends Component {
 		}
 	}
 
-componentDidMount(){
-	this.getProducts();
-}
+	componentDidMount(){
+		this.getProducts();
+	}
 
 	getProducts() {
 		fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
