@@ -16,14 +16,14 @@ class ButtonMenu extends Component {
 	}
 
 	render() {
-			return (
-				<TouchableOpacity
-				onPress={this.handlePress.bind(this)}
-				style={this.props.style}>
-				<Text>{this.props.children}</Text>
-				</TouchableOpacity>
-			);
-		}
+		return (
+			<TouchableOpacity
+			onPress={this.handlePress.bind(this)}
+			style={this.props.style}>
+			<Text>{this.props.children}</Text>
+			</TouchableOpacity>
+		);
+	}
 }
 
 class Inicio extends Component {
