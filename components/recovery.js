@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Navigator } from 'react-native';
+import { StyleSheet, Navigator, Alert } from 'react-native';
 import { Container, Content, List, ListItem, InputGroup, Input, Icon, Text, Button, Header, Title, Thumbnail } from 'native-base';
 
 class Recovery extends Component {
@@ -47,38 +47,38 @@ class Recovery extends Component {
 	}
 
 	const styles = StyleSheet.create({
-			container: {
-				flex: 1,
-				backgroundColor: "#607D8B",
-				justifyContent: 'center',
-				alignItems: 'center',
-				opacity: 50,
-			},
-			title: {
-				alignItems: 'center',
-				justifyContent: 'center',
-			},
-			TextInput:{
-				backgroundColor: "#FFF",
-				height: 50,
-			},
-			button:{
-				alignSelf: 'center',
-				width: 300,
-				opacity: 0.8,
-				alignItems: 'center',
-				justifyContent: 'center',
-				marginTop: 10,
-				marginBottom: 10,
-				borderRadius: 8
-			},
-			buttonSuccess: {
-				backgroundColor: "#FFC000",
-				color: "#FFF",
-			},
-			link:{
-				color:'#FFC000',
-			}
+		container: {
+			flex: 1,
+			backgroundColor: "#607D8B",
+			justifyContent: 'center',
+			alignItems: 'center',
+			opacity: 50,
+		},
+		title: {
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		TextInput:{
+			backgroundColor: "#FFF",
+			height: 50,
+		},
+		button:{
+			alignSelf: 'center',
+			width: 300,
+			opacity: 0.8,
+			alignItems: 'center',
+			justifyContent: 'center',
+			marginTop: 10,
+			marginBottom: 10,
+			borderRadius: 8
+		},
+		buttonSuccess: {
+			backgroundColor: "#FFC000",
+			color: "#FFF",
+		},
+		link:{
+			color:'#FFC000',
+		}
 	});
 
 module.exports = Recovery;
