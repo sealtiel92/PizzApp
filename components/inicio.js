@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Content, Header, Title, Icon, Text, H1 } from 'native-base';
-import { StyleSheet, Navigator, View, ListView, TouchableHighlight, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Navigator, View, ListView, TouchableHighlight, TouchableOpacity, Image, Alert } from 'react-native';
 
 const Menu = require('./menu');
 const SideMenu = require('react-native-side-menu');
@@ -8,21 +8,22 @@ const Pedidos = require("./pedidos");
 const Perfil = require("./perfil");
 
 class ButtonMenu extends Component {
-  handlePress(e) {
-	if (this.props.onPress) {
-	  this.props.onPress(e);
+	
+	handlePress(e) {
+		if (this.props.onPress) {
+			this.props.onPress(e);
+		}
 	}
-  }
 
-  render() {
-	return (
-	  <TouchableOpacity
-		onPress={this.handlePress.bind(this)}
-		style={this.props.style}>
-		<Text>{this.props.children}</Text>
-	  </TouchableOpacity>
-	);
-  }
+	render() {
+			return (
+				<TouchableOpacity
+				onPress={this.handlePress.bind(this)}
+				style={this.props.style}>
+				<Text>{this.props.children}</Text>
+				</TouchableOpacity>
+			);
+		}
 }
 
 class Inicio extends Component {
@@ -145,28 +146,28 @@ class Inicio extends Component {
 }
 
 const styles = StyleSheet.create({
-  button: {
-	position: 'absolute',
-  },
-  caption: {
-	fontSize: 20,
-	fontWeight: 'bold',
-	alignItems: 'center',
-  },
-  container: {
-	flex: 1,
-	backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-	fontSize: 20,
-	textAlign: 'center',
-	margin: 10,
-  },
-  instructions: {
-	textAlign: 'center',
-	color: '#333333',
-	marginBottom: 5,
-  },
+		button: {
+		position: 'absolute',
+		},
+		caption: {
+		fontSize: 20,
+		fontWeight: 'bold',
+		alignItems: 'center',
+		},
+		container: {
+		flex: 1,
+		backgroundColor: '#F5FCFF',
+		},
+		welcome: {
+		fontSize: 20,
+		textAlign: 'center',
+		margin: 10,
+		},
+		instructions: {
+		textAlign: 'center',
+		color: '#333333',
+		marginBottom: 5,
+		},
 });
 
 module.exports = Inicio;
