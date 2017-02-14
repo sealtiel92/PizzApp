@@ -4,24 +4,48 @@ import { Container, Content, Header, Title, Thumbnail, List, ListItem, InputGrou
 
 class Login extends Component {
 
-  constructor(props) {
-	  super(props);
-	  onRegister = onRegister.bind(this);
-	  onRecovery = onRecovery.bind(this);
-	  onLogin = onLogin.bind(this);
-  }
+	constructor(props) {
+		super(props);
+		this.onLogin = this.onLogin.bind(this);
+		this.onRecovery = this.onRecovery.bind(this);
+		this.onRegister = this.onRegister.bind(this);
+	}
 
-   componentDidMount(){
-	   //
-   }
+	componentDidMount(){
+		//
+	}
+
+	onLogin (){
+		this.props.navigator.replace({
+			title: 'Dashboard',
+			name: 'Dashboard',
+			passProps: {}
+		});
+	}
+
+	onRecovery (){
+		this.props.navigator.push({
+			title: 'Recovery',
+			name: 'Recovery',
+			passProps: {}
+		});
+	}
+
+	onRegister (){
+		this.props.navigator.push({
+			title: 'Register',
+			name: 'Register',
+			passProps: {}
+		});
+	}
   
-  render() {
+	render() {
 	return (
-	  <Container>
-		  <Header style={{backgroundColor: '#01B2FF'}}>
+		<Container>
+			<Header style={{backgroundColor: '#01B2FF'}}>
 			<Title style={{alignSelf:'center'}}>PizzApp</Title>
-		  </Header>
-		  <Content style={{backgroundColor:'#FFB700'}}>
+			</Header>
+			<Content style={{backgroundColor:'#FFB700'}}>
 			<Thumbnail style={{alignSelf:'center', width:150, height:100, marginTop: 40}} 
 			source={{uri:'https://cdn.pixabay.com/photo/2012/04/13/01/53/pizza-31782_960_720.png'}} />
 			<List style={{ marginLeft: 20, marginRight: 20, marginTop: 5 }}>
@@ -39,40 +63,16 @@ class Login extends Component {
 				</ListItem>
 			</List>
 			<Button 
-				onPress={onLogin}
+				onPress={this.onLogin}
 				style={{margin: 5, backgroundColor:'#FF3100', alignSelf: 'center', marginTop: 20, marginBottom: 20, width: 300, borderRadius:10, justifyContent:'center' }}>
 				<Text>Iniciar</Text>
 			</Button>
-			<Text onPress={onRegister} style={{ alignSelf:'center', color: '#FFF' }}>¿Aun no estas registrado?</Text>
-			<Text onPress={onRecovery} style={{ alignSelf:'center', color: '#FF3100', marginTop: 15 }}>Olvide mi contraseña</Text>
-		  </Content>
-	  </Container>
+			<Text onPress={this.onRegister} style={{ alignSelf:'center', color: '#FFF' }}>¿Aun no estas registrado?</Text>
+			<Text onPress={this.onRecovery} style={{ alignSelf:'center', color: '#FF3100', marginTop: 15 }}>Olvide mi contraseña</Text>
+			</Content>
+		</Container>
 	);
-  }
-}
-
-function onLogin (){
-	this.props.navigator.replace({
-		title: 'Dashboard',
-		name: 'Dashboard',
-		passProps: {}
-	});
-}
-
-function onRecovery (){
-	this.props.navigator.push({
-		title: 'Recovery',
-		name: 'Recovery',
-		passProps: {}
-	});
-}
-
-function onRegister (){
-	this.props.navigator.push({
-		title: 'Register',
-		name: 'Register',
-		passProps: {}
-	});
+	}
 }
 
 module.exports = Login;
