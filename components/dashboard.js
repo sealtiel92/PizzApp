@@ -62,21 +62,21 @@ class Dashboard extends Component {
 	render() {
 		return (
 				<Navigator style={{backgroundColor:'#fff'}}
-						initialRoute={{
-						name: 'Inicio',
-						component: Inicio
-						}}
-						renderScene={this.renderScene}
-						configureScene={(route)=>{
-						if(route.sceneConfig){
-								return route.sceneConfig;
-						}
-						return Navigator.SceneConfigs.FloatFromRight;
-						}}
-						NavigationBar={
-							<Navigator.NavigationBar
-								routeMapper={ NavigatorBarRouterMapper } />
-						}
+					initialRoute={{
+					name: 'Inicio',
+					component: Inicio
+					}}
+					renderScene={this.renderScene}
+					configureScene={(route)=>{
+					if(route.sceneConfig){
+							return route.sceneConfig;
+					}
+					return Navigator.SceneConfigs.FloatFromRight;
+					}}
+					NavigationBar={
+						<Navigator.NavigationBar
+							routeMapper={ NavigatorBarRouterMapper } />
+					}
 				/>	
 		)
 	}
